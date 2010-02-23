@@ -3,6 +3,7 @@
 # Euler Problem 1 
 #
 ##
+
 sum = 0
 
 1.upto(999) do |x|
@@ -11,4 +12,4 @@ sum = 0
   end
 end
 
-print sum
+puts sum

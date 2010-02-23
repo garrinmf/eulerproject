@@ -19,5 +19,5 @@ while target > 1
   target /= factor while (target % factor).zero?
 end
 
-print factor
+puts factor
 

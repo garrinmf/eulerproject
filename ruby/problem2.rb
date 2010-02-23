@@ -17,4 +17,4 @@ while sum <= 4000000 do
   second = fib
 end
 
-print sum
+puts sum
