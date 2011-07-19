@@ -7,7 +7,7 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # A greed roll is scored as follows:
 #
 # * A set of three ones is 1000 points
-#   
+#
 # * A set of three numbers (other than ones) is worth 100 times the
 #   number. (e.g. three fives is 500 points).
 #
@@ -30,50 +30,10 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # Your goal is to write the score method.
 
 def score(dice)
-  if dice.nil?
-    return 0
-  end
-  
-  if dice.size == 0
-    return 0
-  end
-
-  trip_score = 0
-
-  results = dice.inject({}) {|h,v| h[v]=h[v].to_i+1; h}  
-
-  results.keys.each do |x|
-    if results[x] >= 3
-      if x == 1
-        trip_score += 1000
-        (results[x] % 3).times { trip_score += 100 }
-      else     
-        trip_score += x * 100
-      end
-
-      if x == 5
-        (results[x] % 3).times { trip_score += 50 }        
-      end
-    else
-      results[x].times { trip_score += get_value(x)}
-    end
-    
-  end
-
-  return trip_score
+  # You need to write this method
 end
 
-def get_value(die)
-  if die == 1
-    return 100
-  elsif die == 5
-    return 50
-  else
-    return 0
-  end
-end
-
-class AboutScoringAssignment < EdgeCase::Koan
+class AboutScoringProject < EdgeCase::Koan
   def test_score_of_an_empty_list_is_zero
     assert_equal 0, score([])
   end

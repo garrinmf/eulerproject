@@ -1,4 +1,3 @@
-
 # Triangle Project Code.
 
 # Triangle analyzes the lengths of the sides of a triangle
@@ -15,34 +14,7 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  if a == 0 && b == 0 && c == 0
-    raise TriangleError , "Invalid Triangle"
-  end
-
-  if a <= 0 || b <= 0 || c <= 0
-    raise TriangleError, "Invalid Triangle"
-  end
-
-  if a == c && a == b
-    :equilateral
-  elsif((a == c && a != b))
-    if(a + c <= b)
-      raise TriangleError, "Invalid triangle"
-    end
-    :isosceles
-  elsif( a == b && a != c )
-    if(a + b <= c)
-      raise TriangleError, "Invalid triangle"
-    end
-    :isosceles
-  elsif( b == c && b != a)
-    if(b + c <= a)
-      raise TriangleError, "Invalid triangle"
-    end
-    :isosceles
-  else
-    :scalene
-  end  
+  # WRITE THIS CODE
 end
 
 # Error class used in part 2.  No need to change this code.
